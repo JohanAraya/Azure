@@ -1,0 +1,84 @@
+﻿@using ComponentesMVC.ViewModels
+
+@model AccountViewModel
+@{
+  ViewBag.Title = "Create Account";
+}
+@section Scripts {
+  <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+   <link href="~/css/site2.css" rel="stylesheet" />
+}
+<div class="col-md-6 offset-md-3">
+  <div class="card card-body bg-light">
+        <form method="post">
+          <div asp-validation-summary="ModelOnly "> </div>
+
+            <div class="form-group">
+                <label asp-for="Name">Name:</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+      
+              <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input type="email" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+              </div>
+
+             <div class="form-group">
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>                
+            </div>
+
+              <div class="form-group">
+                <label asp-for="ConfirmPassword">Confirm Password:</label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <div class="text-danger">@ViewBag.WrongPass</div>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="PetKind">Pet kind looking:</label>
+                <input asp-for="PetKind" class="form-control" />
+                <span asp-validation-for="PetKind" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PetBreed">Pet breed looking:</label>
+                <input asp-for="PetBreed" class="form-control" />
+                <span asp-validation-for="PetBreed" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="PetName">Pets name:</label>
+                <input asp-for="PetName" class="form-control" />
+                <span asp-validation-for="PetName" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Breed">Pet breed:</label>
+                <input asp-for="Breed" class="form-control" />
+                <span asp-validation-for="Breed" class="text-danger"></span>
+            </div>
+
+              <div class="form-group">
+                <label asp-for="Kind">Pet kind:</label>
+                <input asp-for="Kind" class="form-control" />
+                <span asp-validation-for="Kind" class="text-danger"></span>
+            </div>
+
+              <div class="form-group">
+                <label asp-for="Sex">Pet sex:</label>
+                <input asp-for="Sex" class="form-control" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+      
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary"><i class='fas fa-envelope'></i>  Send </button>
+               
+              </div>
+        </form>
+  </div>
+</div>
